@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
 
+
 body {
   background-color: #A1A1A1;  
   color: #7f8c8d;    
@@ -60,11 +61,40 @@ a:hover {
   font-weight: 400;
 }
 
+.my-message {
+  font-weight: 100;
+}
+
 .contact, 
 .heading, 
 #portfolio,#portfolio2,
 .resume {
   margin: 0 0 45px 0;
+}
+
+.social-icons {
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 4%;
+  margin-left: 5%;
+
+  .iconic {
+    font-size: 3em;
+    padding: 4%;
+    margin-right: 0px;
+
+    i {
+      color: rgba(17, 17, 1, .1);
+    }
+    
+
+    &:hover {
+      i.icon {
+        color: rgba(17, 17, 1, .8);
+      }
+    }
+  }
 }
 
 
@@ -125,6 +155,7 @@ a:hover {
   margin-top: 1%;
   margin-bottom: 5%;
   text-transform: uppercase;
+  letter-spacing: 1px;
 
   &.subcaption {
       color: #999;
@@ -157,11 +188,19 @@ a:hover {
 }
 
 .my-venture {
-    /*margin-left: 2%;*/
     max-width: 60px;
     margin-top: 5px;
     line-height: 11px; 
     font-size: 12px;
+    
+    span {
+      line-height: 2.0em;
+      
+      small {
+        color: gray;
+        font-size: 60%;
+      }
+    }
 }
 
 .my-specifics {
@@ -237,20 +276,20 @@ a:hover {
 &.tool {
   &:hover {
     code {
-      @include translucent-background( #f1c40f, .5);
+      @include translucent-background( #2ecc71, .5);
     }
     span i {
-      color: #f1c40f;
+      color: #2ecc71;
     }
   }
 }
 &.design {
   &:hover {
     code {
-      @include translucent-background(#e67e22, .5);
+      @include translucent-background(#2ecc71, .5);
     }
     span i {
-      color: #e67e22;
+      color: #2ecc71;
     }
   }
 }
@@ -558,11 +597,12 @@ a:hover {
     }
 }
 
+
 .iconic {
   font-size: 3.3em;
   float: left;
-  margin-right: 5%;
   margin-bottom: -10px;
+  padding: 5%;
 
   &:last-child {
     margin-top: -5px;
