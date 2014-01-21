@@ -1,8 +1,10 @@
 @import 'sass-bootstrap/lib/bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
 
 body {
   background-color: #A1A1A1;  
-  color: #4B4B4B;    
+  color: #7f8c8d;    
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -10,12 +12,18 @@ body {
   padding-top:20px; 
 }
 
-h1, h2 , h3, h4, h5, p, li {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+h1, h2 , h3, h4, h5, {
+  font-family: "Fjalla One", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #4B4B4B;
+  color: #333;
   margin: 0;
   padding: 0;
+}
+
+p {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 16px;
 }
 
 ul {
@@ -36,7 +44,7 @@ a:hover {
   margin: 0 auto;
 }
 .wrapper {
-  background-color: #FFFFFF;
+  background-color: #ecf0f1;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
      -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
           box-shadow: 0 1px 6px rgba(0, 0, 0, 0.30), 0 0 40px rgba(0, 0, 0, 0.10) inset;  
@@ -48,31 +56,22 @@ a:hover {
 .my-specifics, 
 .my-venture, 
 .my-venture > span {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 400;
 }
 
-.my-skill {
-    font-size: 14px;
-    line-height: 30px;
-    @include font-monospace();
-
-    span {
-        font-size: 14px;
-    }
-}
 .contact, 
 .heading, 
-#portfolio,#portfolio2, #portfolio3 
+#portfolio,#portfolio2,
 .resume {
-  margin: 0 0 65px 0;  
+  margin: 0 0 45px 0;
 }
 
 
 /* the header portion */
 .my-picture {
-  background-color: #FFFFFF;
-  border: 1px solid #C0C0C0;
+  background-color: #ecf0f1;
+  border: 1px solid #95a5a6;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -82,7 +81,7 @@ a:hover {
   padding: 4px;
 }
 .my-name {
-  color: #4A4A4A;
+  color: #2c3e50;
   font-size: 24px;
   line-height: 34px;
   text-transform: uppercase;
@@ -93,7 +92,7 @@ a:hover {
   line-height: 34px;
 }
 .my-profession {
-  color: #389B17;
+  color: #3498db;
 }
 .my-services {
   margin-top: 34px;
@@ -103,9 +102,13 @@ a:hover {
 }
 
 /* resume */
+.resume > .span8 {
+  padding-right: 10%;
+}
+
 #headline {
-  border-bottom: 1px dotted #389B17;
-  color: #389B17;
+  border-bottom: 1px dotted #95a5a6;
+  color: #95a5a6;
   font-size: 24px;
   font-weight: 200;
   line-height: normal;
@@ -114,20 +117,19 @@ a:hover {
   text-transform: uppercase;
 }
 .my-caption {
-  border-bottom: 1px dotted #389B17;
-  color: #389B17;
+  /*border-bottom: 1px dotted #95a5a6;*/
+  color: #95a5a6;
   font-size: 16px;
   font-weight: 200;
   line-height: normal;
-  /*margin-top: 1%;*/
-  margin-bottom: 3%;
+  margin-top: 1%;
+  margin-bottom: 5%;
   text-transform: uppercase;
 
   &.subcaption {
-      border-bottom: 1px dotted gray;
       color: #999;
       font-size: 12px;
-      margin-bottom: 1%;
+      margin-bottom: 7%;
       margin-top: 0px;
   }
 }
@@ -147,6 +149,10 @@ a:hover {
       -webkit-border-radius: 0px;
       vertical-align: bottom;
       margin: 1%;
+
+      &:hover {
+        color: green;
+      }
   }
 }
 
@@ -158,69 +164,103 @@ a:hover {
     font-size: 12px;
 }
 
-.skillz {
-
-}
-
 .my-specifics {
   margin-top: 5px;
   margin-bottom: 10px;
+  min-width: 50%;
   font-size: 14px;
   margin-left: 10px;
+
+  .label {
+    line-height: 17px;
+    @include translucent-background(#ecf0f1, 0);
+    border: 1px dotted #95a5a6;
+    font-family:Roboto;
+    font-weight: 300;
+    color: #222;
+    margin-right: 6%;
+    margin-top: 3%;
+    padding: 1.5%;
+    text-shadow: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+-webkit-transition: all 200ms cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+   -moz-transition: all 200ms cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+    -ms-transition: all 200ms cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+     -o-transition: all 200ms cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+        transition: all 200ms cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
+
+-webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+   -moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+    -ms-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+     -o-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); 
+        transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
+
+
+    &:hover {
+      @include border-radius(50px);
+      @include translucent-background(#2ecc71, .5);
+      border: 1px #ecf0f1 solid;
+      color: #ecf0f1;
+      font-weight: 400;
+      font-style: condensed;
+    }
+  }
+
+
 }
+
+
 .my-specifics > ul {
     list-style: none;
 }
 .my-skill {
+  padding: 5%;
+  padding-left: 2%;
+  padding-right: 20%;
   padding-top: 1px;
-  line-height: 36px;
+  min-width: 200px;
   font-weight: 400;
+  @include transition(all .5s ease-in-out);
 
   &:hover {
       code {
-          color: #222;
-          /*padding: 3%;*/
-          font-weight: 700;
+        color: #222;
+        @include translucent-background(#2ecc71, .5);
       }
-
-      span i.icon-2x {
-          font-size: 2.6em;
-          color: #222;
+      span i {
+        color: #2ecc71;
       }
+}
 
+&.tool {
+  &:hover {
+    code {
+      @include translucent-background( #f1c40f, .5);
+    }
+    span i {
+      color: #f1c40f;
+    }
   }
 }
-
-.legend {
-    padding: 1%;
-    @include translucent-background( gray, .3);
-}
-
-.well .my-skill h4 {
-
-    font-size: 10px;
-
-    @include opacity(0);
-    @include transition(opacity 1s ease-in-out);
-
-
-    &:hover {
-
-        h4 {
-            @include opacity(1);
-        }
-        span i.icon-large {
-           color: #c3c;
-        }
+&.design {
+  &:hover {
+    code {
+      @include translucent-background(#e67e22, .5);
     }
-
+    span i {
+      color: #e67e22;
+    }
+  }
+}
 }
 .my-skill + .my-skill {
   padding-bottom: -1px;
 }
 .my-skill > span {
   float: right;
-  margin-right: 0%;
+  margin-right: 10%;
   font-size: 10px;
   font-weight: 400;
   margin: 1px 0 0 0;
@@ -248,37 +288,91 @@ a:hover {
 }
 
 /* portfolio */
-#portfolio, #portfolio2, #portfolio3, #portfolio4 {
+#portfolio, #portfolio2 {
   margin-bottom: 40px;
   margin-top: 40px;
 }
+
 .portfolio-item {
   display: inline-block;
   margin-bottom: 8px;
   vertical-align: top;
   width: 215px;
+
 }
+
+#portfolio2 {
+  .portfolio-item {
+    h5 {
+      line-height: 1.3em;
+      font-weight: bold;
+      color: #555;
+    }
+
+    &:hover {
+      h5 {
+        color: #333;
+      }
+    }
+  }
+
+
+
+  .portfolio-item a {
+    img {
+      margin-bottom: 5%;
+      border: 1px solid #bdc3c7;
+    }
+
+    &:hover {
+      h5 {
+        color: #e74c3c;
+        font-size: .9em;
+        font-weight: bold;
+      }
+    }
+  }
+  .portfolio-item:last-child {
+    img {
+      margin-left: 0%;
+      margin-top: 0%;
+      margin-right: 0%;
+    }
+
+    &:before{
+    }
+  }
+}
+
 .portfolio-item > img {
   max-width: 100%;
-  margin-bottom: -1px;
+  /*margin-bottom: -1px;*/
 }
 .portfolio-details {
-  /*border: 1px solid #D1D1D1;*/
+  border: 1px solid #D1D1D1;
   padding: 6px 6px 5px 6px;
+
+  &:hover {
+
+    h4 {
+    color: #e74c3c;
+    }
+
+  }
 }
 .portfolio-details > h4 {
   color: #3c3c3c;
-  font-size: 12px; 
+  font-size: 14px; 
   font-weight: 600;
   line-height: normal;
   margin-bottom: 3px;
   text-transform: uppercase;
 }
 .portfolio-details > p {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
-  /*margin-top: 5px;*/
+  margin-top: 5px;
 }
 .portfolio-details > p + img {
   margin-top: 10px;
@@ -292,33 +386,35 @@ a:hover {
    margin-top: 10px;
 }
 .portfolio-details a {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
 }
 .portfolio-details i {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
 }
 .portfolio-links {
   margin-top: 10px !important;
 }
 
-/* contact tab */
-#my-location {
-  border: 1px solid #D8D8D8;
-  height: 200px;
-  margin-bottom: 5px;
-  width: 100%;
+#portfolio2 .portfolio-item {
+  width: 430px;
+
 }
-#my-location img {
-    max-width: none;
-}
-.my-info {
-  height: 20px; 
-  display: block;
-}
-.my-info > span {
-  float: right;
+.iconic {
+  font-size: 1.3em;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: -10px;
+
+    &:hover {
+      /*font-size: 1.4em;*/
+    }
+
+  a {
+    color: #3498db;
+  }
+
 }
 
 
@@ -356,6 +452,49 @@ a:hover {
     margin: 0 0 25px 0;  
   }
 
+  .row-fluid .span8 {
+    width: 100%;
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  .row-fluid .span4 {
+    width: 100%;
+    padding: 4%;
+
+    code {
+      font-size: 18px;
+    }
+
+    a i.icon-2x {
+      font-size: 3.0em;
+    }
+  }
+
+.iconic {
+  font-size: 3.3em;
+  float: left;
+  padding: 1%;
+  margin-right: 8%;
+  margin-bottom: -10px;
+
+  &:last-child {
+    margin-top: -6px;
+    font-size: 2.35em;
+  }
+
+    &:hover {
+      /*font-size: 1.4em;*/
+    }
+
+  a {
+    color: #3498db;
+  }
+
+}
+
 }
 
 @media (min-width: 240px) and (max-width: 568px) {
@@ -368,9 +507,9 @@ a:hover {
   }
   .contact,
   .heading,
-  #portfolio, #portfolio2, #portfolio3, #portfolio4,
+  #portfolio, #portfolio2,
   .resume {
-    margin: 0 0 25px 0;  
+    margin: 0 0 25px 0;
   }
 
   .my-picture {
@@ -393,43 +532,52 @@ a:hover {
       line-height: 24px;
       margin-top: 10px;
   }
-
-}
-li {
-    padding: 1%;
-}
-
-.lead {
-    line-height: 18px;
+  #portfolio, #portfolio2 p {
     font-size: 16px;
-    color: #222;
-    margin-right: 3%;
+  }
 
-    &.muted {
-        color: #555;
-        font-size: 14px;
-        line-height: 16px;
+  .row-fluid .span8 {
+    width: 100%;
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  .row-fluid .span4 {
+    width: 100%;
+    padding: 4%;
+
+    code {
+      font-size: 18px;
+    }
+
+    .portfolio-details > p {
+      font-size: 18px;
+      line-height: 28px;
     }
 }
 
-#skillz {
-    /*margin-top: 10%;*/
-}
-#contactz {
-    margin-top: 10%;
-}
+.iconic {
+  font-size: 3.3em;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: -10px;
 
-p.my-servicetext {
-    font-size: 0.9em;
-    color: #666;
-    text-align: center;
-    font-family: Helvetica;
-}
+  &:last-child {
+    margin-top: -5px;
+  }
 
-code {
-    color: #666;
-}
+    &:hover {
+      /*font-size: 1.4em;*/
+    }
 
+  a {
+    color: #3498db;
+  }
+
+}
+}
 
 
 

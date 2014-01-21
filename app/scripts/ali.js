@@ -11,13 +11,11 @@ $(document).ready(function(){
 
 
 function init_masonry(){
-    
     var $container = $('#portfolio');
     var gutter = 12;
     var min_width = 215;
 
     $container.imagesLoaded( function(){
-        
         $container.masonry({
 
             itemSelector: '.portfolio-item',
@@ -51,6 +49,7 @@ $(function () {
         selector: 'a[rel="tooltip"], [data-toggle="tooltip"]'
     });
 });
+
 
 
 
